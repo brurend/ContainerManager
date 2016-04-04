@@ -46,3 +46,4 @@ Carthage/Build
 fastlane/report.xml
 fastlane/screenshots
 fastlane/README.md
+fastlane/test-output/*
