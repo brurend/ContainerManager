@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		9501EF761CB2E0B70095045E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501EF751CB2E0B70095045E /* AppDelegate.swift */; };
-		9501EF781CB2E0B70095045E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501EF771CB2E0B70095045E /* ViewController.swift */; };
 		9501EF7B1CB2E0B70095045E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9501EF791CB2E0B70095045E /* Main.storyboard */; };
 		9501EF7D1CB2E0B70095045E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9501EF7C1CB2E0B70095045E /* Assets.xcassets */; };
 		9501EF801CB2E0B70095045E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9501EF7E1CB2E0B70095045E /* LaunchScreen.storyboard */; };
+		950796BD1CB432120044CFC7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796BC1CB432120044CFC7 /* FirstViewController.swift */; };
+		950796BF1CB432240044CFC7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796BE1CB432240044CFC7 /* SecondViewController.swift */; };
+		950796C11CB4323E0044CFC7 /* MyContainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C01CB4323E0044CFC7 /* MyContainerData.swift */; };
+		950796C31CB4337F0044CFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C21CB4337F0044CFC7 /* ViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		950796C91CB434300044CFC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9501EF231CB2D9340095045E;
+			remoteInfo = ContainerManager;
+		};
+		950796CB1CB434300044CFC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9501EF2D1CB2D9340095045E;
+			remoteInfo = ContainerManagerTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9501EF721CB2E0B70095045E /* ContainerManager Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ContainerManager Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9501EF751CB2E0B70095045E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9501EF771CB2E0B70095045E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9501EF7A1CB2E0B70095045E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9501EF7C1CB2E0B70095045E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9501EF7F1CB2E0B70095045E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9501EF811CB2E0B70095045E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950796BC1CB432120044CFC7 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		950796BE1CB432240044CFC7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		950796C01CB4323E0044CFC7 /* MyContainerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContainerData.swift; sourceTree = "<group>"; };
+		950796C21CB4337F0044CFC7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContainerManager.xcodeproj; path = ../ContainerManager.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +64,7 @@
 			children = (
 				9501EF741CB2E0B70095045E /* ContainerManager Example */,
 				9501EF731CB2E0B70095045E /* Products */,
+				950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +80,41 @@
 			isa = PBXGroup;
 			children = (
 				9501EF751CB2E0B70095045E /* AppDelegate.swift */,
-				9501EF771CB2E0B70095045E /* ViewController.swift */,
-				9501EF791CB2E0B70095045E /* Main.storyboard */,
-				9501EF7C1CB2E0B70095045E /* Assets.xcassets */,
-				9501EF7E1CB2E0B70095045E /* LaunchScreen.storyboard */,
-				9501EF811CB2E0B70095045E /* Info.plist */,
+				950796BC1CB432120044CFC7 /* FirstViewController.swift */,
+				950796BE1CB432240044CFC7 /* SecondViewController.swift */,
+				950796C01CB4323E0044CFC7 /* MyContainerData.swift */,
+				950796C21CB4337F0044CFC7 /* ViewController.swift */,
+				950796BA1CB431930044CFC7 /* Supporting Files */,
 			);
 			path = "ContainerManager Example";
+			sourceTree = "<group>";
+		};
+		950796BA1CB431930044CFC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9501EF7C1CB2E0B70095045E /* Assets.xcassets */,
+				9501EF811CB2E0B70095045E /* Info.plist */,
+				950796BB1CB4319F0044CFC7 /* Base.lproj */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		950796BB1CB4319F0044CFC7 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9501EF791CB2E0B70095045E /* Main.storyboard */,
+				9501EF7E1CB2E0B70095045E /* LaunchScreen.storyboard */,
+			);
+			name = Base.lproj;
+			sourceTree = "<group>";
+		};
+		950796C51CB434300044CFC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				950796CA1CB434300044CFC7 /* ContainerManager.framework */,
+				950796CC1CB434300044CFC7 /* ContainerManagerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,12 +163,35 @@
 			mainGroup = 9501EF691CB2E0B70095045E;
 			productRefGroup = 9501EF731CB2E0B70095045E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 950796C51CB434300044CFC7 /* Products */;
+					ProjectRef = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9501EF711CB2E0B70095045E /* ContainerManager Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		950796CA1CB434300044CFC7 /* ContainerManager.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ContainerManager.framework;
+			remoteRef = 950796C91CB434300044CFC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		950796CC1CB434300044CFC7 /* ContainerManagerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ContainerManagerTests.xctest;
+			remoteRef = 950796CB1CB434300044CFC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9501EF701CB2E0B70095045E /* Resources */ = {
@@ -135,8 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9501EF781CB2E0B70095045E /* ViewController.swift in Sources */,
+				950796C31CB4337F0044CFC7 /* ViewController.swift in Sources */,
+				950796BF1CB432240044CFC7 /* SecondViewController.swift in Sources */,
 				9501EF761CB2E0B70095045E /* AppDelegate.swift in Sources */,
+				950796BD1CB432120044CFC7 /* FirstViewController.swift in Sources */,
+				950796C11CB4323E0044CFC7 /* MyContainerData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +367,7 @@
 				9501EF861CB2E0B70095045E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

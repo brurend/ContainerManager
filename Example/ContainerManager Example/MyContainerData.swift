@@ -1,5 +1,5 @@
 //
-// ViewController.swift
+// MyContainerData.swift
 //
 // Created by Bruno Rendeiro.
 // Copyright © 2016 brurend.
@@ -25,21 +25,19 @@
 import UIKit
 import ContainerManager
 
-class ViewController: UIViewController {
+class MyContainerData: ContainerDataManager {
+
+    let array = [1,2,3]
     
-    var containerView: ContainerViewSegueManager!
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "embedSegue" {
-            self.containerView = segue.destinationViewController as! ContainerViewSegueManager
+    override func additionalSetup() {
+        
+        if array.count != 0 {
+            self.currentSegueIdentifier = "FirstViewController"
+        }
             
-            let data = MyContainerData(fromParent: self, fromContainer: self.containerView)
-            
-            self.containerView.containerDataClass = data
+        else {
+            self.currentSegueIdentifier = "SecondViewController"
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        return true
-    }
 }

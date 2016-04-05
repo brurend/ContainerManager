@@ -1,5 +1,5 @@
 //
-// ViewController.swift
+// FirstViewController.swift
 //
 // Created by Bruno Rendeiro.
 // Copyright © 2016 brurend.
@@ -25,21 +25,21 @@
 import UIKit
 import ContainerManager
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
+
+    var container: ContainerViewSegueManager!
     
-    var containerView: ContainerViewSegueManager!
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "embedSegue" {
-            self.containerView = segue.destinationViewController as! ContainerViewSegueManager
-            
-            let data = MyContainerData(fromParent: self, fromContainer: self.containerView)
-            
-            self.containerView.containerDataClass = data
-        }
+    override func viewDidLoad() {
+        
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        return true
+    override func viewWillAppear(animated: Bool) {
+        container = self.parentViewController as! ContainerViewSegueManager
+    }
+    
+    @IBAction func swapButton(sender: AnyObject) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let second = storyboard.instantiateViewControllerWithIdentifier("SecondViewController")
+        container.swapFromViewController(self, toViewController: second)
     }
 }

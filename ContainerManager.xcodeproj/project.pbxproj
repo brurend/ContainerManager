@@ -61,7 +61,6 @@
 			children = (
 				9501EF251CB2D9340095045E /* ContainerManager */,
 				9501EF311CB2D9340095045E /* ContainerManagerTests */,
-				9501EF3D1CB2DA200095045E /* Supporting Files */,
 				9501EF241CB2D9340095045E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +77,7 @@
 		9501EF251CB2D9340095045E /* ContainerManager */ = {
 			isa = PBXGroup;
 			children = (
+				9501EF3D1CB2DA200095045E /* Supporting Files */,
 				9501EF451CB2DB2F0095045E /* EmptySegue.swift */,
 				9501EF471CB2DBCA0095045E /* ContainerDataManager.swift */,
 				9501EF491CB2DBE80095045E /* ContainerViewSegueManager.swift */,
@@ -101,7 +101,6 @@
 				9501EF281CB2D9340095045E /* Info.plist */,
 			);
 			name = "Supporting Files";
-			path = ContainerManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +401,7 @@
 				9501EF391CB2D9340095045E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9501EF3A1CB2D9340095045E /* Build configuration list for PBXNativeTarget "ContainerManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +410,7 @@
 				9501EF3C1CB2D9340095045E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
