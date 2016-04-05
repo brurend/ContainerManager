@@ -16,23 +16,26 @@ you also need to make sure the embed `UIViewController` custom class is `Contain
 
 ![Screenshots/ContainerViewSegueManagerSS.png](Screenshots/ContainerViewSegueManagerSS.png)
 
-and then in your `UIViewController` class override `prepareForSegue:sender:` with references to `ContainerViewSegueManager` and to your `ContainerDataManager` subclass, 
-note it's VERY important that you pass your class type and not an object of it!:
+and then in your `UIViewController` class override `prepareForSegue:sender:` with references to `ContainerViewSegueManager` and
+an instance of your `ContainerDataManager` subclass:
 
-```objective-c
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-if ([segue.identifier isEqualToString:@"embedSegue"]) {
-self.containerView = (ContainerViewSegueManager*)segue.destinationViewController;
-self.containerView.containerDataClass = [CVMViewDataManager class];
-}
+```swift
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "embedSegue" {
+    	self.containerView = segue.destinationViewController as! ContainerViewSegueManager
+            
+        let data = MyContainerData(fromParent: self, fromContainer: self.containerView)
+            
+        self.containerView.containerDataClass = data
+    }
 }
 ```
 
 Make sure `shouldPerformSegueWithIdentifier:sender:` returns `YES`
 
-```objective-c
--(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
-return YES;
+```swift
+override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+return true
 }
 ```
 
@@ -51,36 +54,29 @@ All segues from your `ContainerViewSegueManager` to your `UIViewController` shou
 You should create a subclass of `ContainerDataManager` and override the `additionalSetup` method:
 
 `MyContainerDataManager.h`
-```objective-c
-#import <Foundation/Foundation.h>
-#import <ContainerDataManager/ContainerDataManager.h>
+```swift
+import UIKit
+import ContainerManager
 
-@interface CVMViewDataManager : ContainerDataManager
-
-@end
+class MyContainerData: ContainerDataManager
 ```
 
 #### Choosing which `segueIdentifier` will be used
 
-`ContainerDataManager additionalSetup` method will be overridden by your class implementation. You MUST call `[super additionalSetup]` and `self.currentSegueIdentifier` must NOT be nil.
+`ContainerDataManager additionalSetup` method will be overridden by your class implementation. `self.currentSegueIdentifier` must NOT be nil.
 
 `MyContainerDataManager.m`
-```objective-c
--(void)additionalSetup{
-_array = @[@"1",@"2"];
-
-self.currentSegueIdentifier = @"FirstViewController";
-
-if ([_array count] != 0) {
-self.currentSegueIdentifier = @"FirstViewController";
-self.parent.navigationItem.title = @"FIRST";
-}
-else {
-self.currentSegueIdentifier = @"SecondViewController";
-self.parent.navigationItem.title = @"SECOND";
-}
-
-[super additionalSetup];
+```swift
+override func additionalSetup() {
+    let array = [1,2,3]
+        
+    if array.count != 0 {
+        self.currentSegueIdentifier = "FirstViewController"
+    }
+            
+	else {
+        self.currentSegueIdentifier = "SecondViewController"
+    }
 }
 ```
 
@@ -88,10 +84,10 @@ self.parent.navigationItem.title = @"SECOND";
 
 You can use `ContainerViewSegueManager swapFromViewController:toViewController` to go from one `UIViewController` to another `UIViewController` easily.
 
-```objective-c
-UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-CVMFirstViewController *firstView = [storyboard instantiateViewControllerWithIdentifier:@"CVMFirstViewController"];
-[ContainerViewSegueManager swapFromViewController:self toViewController:firstView];
+```swift
+let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+let second = storyboard.instantiateViewControllerWithIdentifier("SecondViewController")        
+container.swapFromViewController(self, toViewController: second)
 ```
 
 ## Requirements
@@ -107,7 +103,7 @@ it, simply add the following line to your `Podfile`:
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.3'
 
-pod 'ContainerViewManager', '~> 1.0.5'
+pod 'ContainerManager', '~> 1.0.0'
 ```
 
 Then, run the following command:

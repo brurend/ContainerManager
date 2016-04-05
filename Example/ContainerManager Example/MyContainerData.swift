@@ -26,10 +26,9 @@ import UIKit
 import ContainerManager
 
 class MyContainerData: ContainerDataManager {
-
-    let array = [1,2,3]
     
     override func additionalSetup() {
+        let array = [1,2,3]
         
         if array.count != 0 {
             self.currentSegueIdentifier = "FirstViewController"
@@ -39,5 +38,4 @@ class MyContainerData: ContainerDataManager {
             self.currentSegueIdentifier = "SecondViewController"
         }
     }
-    
 }
