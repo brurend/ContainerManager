@@ -11,5 +11,5 @@ ContainerManager helps you with linking more than one ViewController to the same
   s.source           = { :git => "https://github.com/brurend/ContainerManager.git", :tag => s.version.to_s }
   s.platform     = :ios, '8.3'
   s.requires_arc = true
-  s.source_files = 'ContainerManager/*'
+  s.source_files = "ContainerManager/*"
 end
