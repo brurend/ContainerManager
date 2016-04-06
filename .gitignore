@@ -48,3 +48,4 @@ fastlane/report.xml
 fastlane/screenshots
 fastlane/README.md
 fastlane/test-output/*
+fastlane/code_coverage/*

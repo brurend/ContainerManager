@@ -1,0 +1,25 @@
+language: objective-c
+env:
+- "COCOAPODS_TRUNK_TOKEN"
+before_install:
+- gem install xcov --no-rdoc --no-ri --no-document --quiet
+- gem install fastlane --no-rdoc --no-ri --no-document --quiet
+- gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+# blacklist
+branches:
+except:
+- dev
+# whitelist
+branches:
+only:
+- master
+script:
+- set -o pipefail
+- ./fastlane/travis.sh
+- pod lib lint
+deploy:
+provider: script
+script: ./fastlane/push.sh
+on:
+tags: true
