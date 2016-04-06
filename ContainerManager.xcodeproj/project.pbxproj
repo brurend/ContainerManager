@@ -13,6 +13,7 @@
 		9501EF461CB2DB2F0095045E /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501EF451CB2DB2F0095045E /* EmptySegue.swift */; };
 		9501EF481CB2DBCA0095045E /* ContainerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501EF471CB2DBCA0095045E /* ContainerDataManager.swift */; };
 		9501EF4A1CB2DBE80095045E /* ContainerViewSegueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501EF491CB2DBE80095045E /* ContainerViewSegueManager.swift */; };
+		950796D11CB592610044CFC7 /* ContainerDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796D01CB592610044CFC7 /* ContainerDataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		9501EF451CB2DB2F0095045E /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		9501EF471CB2DBCA0095045E /* ContainerDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerDataManager.swift; sourceTree = "<group>"; };
 		9501EF491CB2DBE80095045E /* ContainerViewSegueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewSegueManager.swift; sourceTree = "<group>"; };
+		950796D01CB592610044CFC7 /* ContainerDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerDataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				9501EF321CB2D9340095045E /* ContainerManagerTests.swift */,
 				9501EF341CB2D9340095045E /* Info.plist */,
+				950796D01CB592610044CFC7 /* ContainerDataManagerTests.swift */,
 			);
 			path = ContainerManagerTests;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9501EF331CB2D9340095045E /* ContainerManagerTests.swift in Sources */,
+				950796D11CB592610044CFC7 /* ContainerDataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
