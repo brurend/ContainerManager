@@ -2,4 +2,5 @@
 
 source ~/.rvm/scripts/rvm
 rvm use default
-#pod trunk push
+pod lib lint
+pod trunk push

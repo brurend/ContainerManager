@@ -15,7 +15,6 @@ branches:
 script:
     - set -o pipefail
     - ./fastlane/travis.sh
-    - pod lib lint
 deploy:
     provider: script
     script: ./fastlane/push.sh
