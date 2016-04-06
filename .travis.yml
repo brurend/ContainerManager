@@ -7,18 +7,16 @@ before_install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 # blacklist
 branches:
-except:
-- dev
-# whitelist
-branches:
-only:
-- master
+    except:
+    - dev
+    only:
+    - master
 script:
-- set -o pipefail
-- ./fastlane/travis.sh
-- pod lib lint
+    - set -o pipefail
+    - ./fastlane/travis.sh
+    - pod lib lint
 deploy:
-provider: script
-script: ./fastlane/push.sh
-on:
-tags: true
+    provider: script
+    script: ./fastlane/push.sh
+    on:
+        tags: true
