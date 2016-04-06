@@ -60,6 +60,10 @@
         <scene sceneID="9aa-s3-P8M">
             <objects>
                 <viewController storyboardIdentifier="ContainerViewSegueManager" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIR-0v-HA7" customClass="ContainerViewSegueManager" customModule="ContainerManager" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kv8-1T-JRC"/>
+                        <viewControllerLayoutGuide type="bottom" id="vhM-LJ-Urs"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uGb-w7-dSf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
