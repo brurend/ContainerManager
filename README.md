@@ -1,5 +1,10 @@
 # ContainerViewManager
 
+[![Version](https://img.shields.io/cocoapods/v/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
+[![License](https://img.shields.io/cocoapods/l/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
+[![Platform](https://img.shields.io/cocoapods/p/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
+[![Build Status](https://travis-ci.org/brurend/ContainerManager.svg?branch=master)](https://travis-ci.org/brurend/ContainerManager)
+
 ## Usage
 
 ### ContainerViewSegueManager
