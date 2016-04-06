@@ -6,12 +6,9 @@ before_install:
 - gem install xcov --no-rdoc --no-ri --no-document --quiet
 - gem install fastlane --no-rdoc --no-ri --no-document --quiet
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-# blacklist
 branches:
     except:
     - dev
-    only:
-    - master
 script:
     - set -o pipefail
     - ./fastlane/travis.sh
