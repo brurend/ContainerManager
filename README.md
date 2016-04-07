@@ -1,6 +1,7 @@
 # ContainerManager
 
 [![Version](https://img.shields.io/cocoapods/v/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
 [![Platform](https://img.shields.io/cocoapods/p/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
 [![Build Status](https://travis-ci.org/brurend/ContainerManager.svg?branch=master)](https://travis-ci.org/brurend/ContainerManager)
@@ -97,11 +98,14 @@ container.swapFromViewController(self, toViewController: second)
 
 ## Requirements
 
-ContainerViewManager supports iOS 8.3+.
+ContainerManager supports iOS 8.3+.
 
 ## Installation
+ContainerManager supports multiple methods for installing the library in a project.
 
-ContainerViewManager is available through [CocoaPods](http://cocoapods.org). To install
+### Installation with CocoaPods
+
+ContainerManager is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your `Podfile`:
 
 ```ruby
@@ -116,6 +120,25 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+### Installation with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate AFNetworking into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "brurend/ContainerManager" ~> 1.0.0
+```
+
+Run `carthage` to build the framework and drag the built `ContainerManager.framework` into your Xcode project.
 
 ## Author
 
