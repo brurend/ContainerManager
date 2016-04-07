@@ -132,7 +132,7 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate AFNetworking into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate ContainerManager into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
 github "brurend/ContainerManager" ~> 1.0.0
@@ -146,4 +146,4 @@ Bruno Rendeiro, brurend@hotmail.com.
 
 ## License
 
-ContainerViewManager is available under the MIT license. See the [License](https://github.com/brurend/ContainerManager/blob/master/LICENSE.md) file for more info.
+ContainerManager is available under the MIT license. See the [License](https://github.com/brurend/ContainerManager/blob/master/LICENSE.md) file for more info.
