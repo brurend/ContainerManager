@@ -1,4 +1,4 @@
-# ContainerViewManager
+# ContainerManager
 
 [![Version](https://img.shields.io/cocoapods/v/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
 [![License](https://img.shields.io/cocoapods/l/ContainerManager.svg?style=flat)](http://cocoapods.org/pods/ContainerManager)
