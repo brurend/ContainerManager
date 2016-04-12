@@ -47,7 +47,7 @@ return true
 
 ### EmptySegue
 
-All segues from your `ContainerViewSegueManager` to your `UIViewController` should be of the type `EmptySegue` and have an identifier:
+All segues from your `ContainerViewSegueManager` to your `UIViewController` should be of the type `EmptySegue` and have an identifier, don't forget to set the "Module" to `ContainerManager`:
 
 ![Screenshots/EmptySegueSS.png](Screenshots/EmptySegueSS.png)
 
