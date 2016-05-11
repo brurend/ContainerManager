@@ -71,7 +71,6 @@ class MyContainerData: ContainerDataManager
 
 `ContainerDataManager additionalSetup` method will be overridden by your class implementation. `self.currentSegueIdentifier` must NOT be nil.
 
-`MyContainerDataManager.m`
 ```swift
 override func additionalSetup() {
     let array = [1,2,3]
