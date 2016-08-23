@@ -10,10 +10,11 @@ branches:
     except:
     - dev
 script:
+    - env
     - set -o pipefail
     - ./fastlane/travis.sh
-deploy:
-    provider: script
-    script: ./fastlane/push.sh
-    on:
-        tags: true
+#deploy:
+#    provider: script
+#    script: ./fastlane/push.sh
+#    on:
+#        tags: true
