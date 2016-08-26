@@ -10,7 +10,7 @@ branches:
     except:
     - dev
 script:
-    - env
+    - bundle exec danger
     - set -o pipefail
     - ./fastlane/travis.sh
 #deploy:
