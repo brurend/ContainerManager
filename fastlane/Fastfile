@@ -1,13 +1,6 @@
-update_fastlane
-fastlane_version "1.70.0"
-
 default_platform :ios
 
 platform :ios do
-  before_all do
-  
-  end
-
   desc "Runs all the tests"
   lane :test do
   	scan(
@@ -17,7 +10,7 @@ platform :ios do
 	  code_coverage: true,
 	  skip_build: true
 	)
-	
+
 	xcov(
 	  workspace: "ContainerManager.xcworkspace",
 	  scheme: "ContainerManager",
