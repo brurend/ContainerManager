@@ -17,8 +17,8 @@ unless github.api.organization_member?('ContainerManager', github.pr_author)
   message "@#{github.pr_author} is not a contributor yet"
 end
 
-has_app_changes = !git.modified_files.grep(/lib/).empty?
-has_test_changes = !git.modified_files.grep(/spec/).empty?
+has_app_changes = !git.modified_files.grep(/ContainerManager/).empty?
+has_test_changes = !git.modified_files.grep(/ContainerManagerTests/).empty?
 
 if has_app_changes && !has_test_changes
   warn "Tests were no updated"
