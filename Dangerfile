@@ -11,3 +11,15 @@ warn("Big PR") if git.lines_of_code > 500
 # Don't let testing shortcuts get into master by accident
 fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
 fail("fit left in tests") if `grep -r fit specs/ `.length > 1
+
+# Make a note about contributors not in the organization
+unless github.api.organization_member?('ContainerManager', github.pr_author)
+  message "@#{github.pr_author} is not a contributor yet"
+end
+
+has_app_changes = !git.modified_files.grep(/lib/).empty?
+has_test_changes = !git.modified_files.grep(/spec/).empty?
+
+if has_app_changes && !has_test_changes
+  warn "Tests were no updated"
+end
