@@ -39,6 +39,9 @@ GEM
       kramdown (~> 1.5)
       octokit (~> 4.2)
       terminal-table (~> 1)
+    danger-xcov (0.2.2)
+      danger (>= 2.1)
+      xcov (>= 0.9)
     deliver (1.13.3)
       credentials_manager (>= 0.16.0, < 1.0.0)
       fastimage (~> 1.6)
@@ -278,6 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   danger
+  danger-xcov
   fastlane
   xcov
   xcpretty
