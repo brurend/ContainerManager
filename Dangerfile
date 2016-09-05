@@ -21,5 +21,5 @@ has_app_changes = !git.modified_files.grep(/ContainerManager/).empty?
 has_test_changes = !git.modified_files.grep(/ContainerManagerTests/).empty?
 
 if has_app_changes && !has_test_changes
-  warn "Tests were no updated"
+  fail "Tests were not updated"
 end
