@@ -13,8 +13,7 @@ platform :ios do
 
 	xcov(
 	  workspace: "ContainerManager.xcworkspace",
-	  scheme: "ContainerManager",
-    minimum_coverage_percentage: 10.0
+	  scheme: "ContainerManager"
 	)
   end
 end
