@@ -15,5 +15,7 @@ platform :ios do
 	  workspace: "ContainerManager.xcworkspace",
 	  scheme: "ContainerManager"
 	)
+
+  danger
   end
 end

@@ -3,14 +3,10 @@ osx_image: xcode7.3
 env:
 - "COCOAPODS_TRUNK_TOKEN"
 before_install:
-- gem install xcov --no-rdoc --no-ri --no-document --quiet
-- gem install fastlane --no-rdoc --no-ri --no-document --quiet
-- gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 branches:
     except:
     - dev
 script:
-    - bundle exec danger
     - set -o pipefail
     - ./fastlane/travis.sh
 #deploy:
