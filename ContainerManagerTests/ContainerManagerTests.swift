@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 import XCTest
-@testable import ContainerManager
+import ContainerManager
 
 class ContainerManagerTests: XCTestCase {
     
@@ -40,6 +40,12 @@ class ContainerManagerTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let data = ContainerDataManager()
+        
+        
+        XCTAssertNotNil(data)
     }
     
     func testPerformanceExample() {

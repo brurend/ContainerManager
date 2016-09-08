@@ -38,6 +38,10 @@ public class ContainerDataManager: NSObject {
     public var container: ContainerViewSegueManager!
     
     
+    public override init() {
+        
+    }
+    
     /**
      Swap from one ViewController to another.
      
