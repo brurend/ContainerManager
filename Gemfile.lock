@@ -41,8 +41,6 @@ GEM
       terminal-table (~> 1)
     danger-commit_lint (0.0.2)
       danger (~> 3.0)
-    danger-xcodebuild (0.0.3)
-      danger (~> 3.0)
     danger-xcov (0.2.2)
       danger (>= 2.1)
       xcov (>= 0.9)
@@ -286,7 +284,6 @@ PLATFORMS
 DEPENDENCIES
   danger
   danger-commit_lint
-  danger-xcodebuild
   danger-xcov
   fastlane
   xcov

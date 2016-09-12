@@ -21,6 +21,4 @@ xcov.report(
   minimum_coverage_percentage: 1.0
 )
 
-xcodebuild.parse_warnings
-
 commit_lint.check
