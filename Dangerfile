@@ -18,5 +18,5 @@ end
 xcov.report(
   workspace: "ContainerManager.xcworkspace",
   scheme: "ContainerManager",
-  minimum_coverage_percentage: 10.0
+  minimum_coverage_percentage: 1.0
 )
