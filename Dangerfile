@@ -1,5 +1,5 @@
 # Warn when there is a big PR
-warn("Big PR") if git.lines_of_code > 50
+warn("Big PR") if git.lines_of_code > 5000
 
 # Make a note about contributors not in the organization
 unless github.api.organization_member?('ContainerManager', github.pr_author)
@@ -18,7 +18,7 @@ end
 xcov.report(
   workspace: "ContainerManager.xcworkspace",
   scheme: "ContainerManager",
-  minimum_coverage_percentage: 4.0
+  minimum_coverage_percentage: 3.0
 )
 
 commit_lint.check warn: :all
