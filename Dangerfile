@@ -21,4 +21,4 @@ xcov.report(
   minimum_coverage_percentage: 1.0
 )
 
-commit_lint.check
+commit_lint.check warn: :all
