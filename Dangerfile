@@ -18,7 +18,7 @@ end
 xcov.report(
   workspace: "ContainerManager.xcworkspace",
   scheme: "ContainerManager",
-  minimum_coverage_percentage: 5.0
+  minimum_coverage_percentage: 4.0
 )
 
 commit_lint.check warn: :all
