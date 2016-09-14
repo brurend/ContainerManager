@@ -15,6 +15,8 @@
 		950796BF1CB432240044CFC7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796BE1CB432240044CFC7 /* SecondViewController.swift */; };
 		950796C11CB4323E0044CFC7 /* MyContainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C01CB4323E0044CFC7 /* MyContainerData.swift */; };
 		950796C31CB4337F0044CFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C21CB4337F0044CFC7 /* ViewController.swift */; };
+		95BCD44B1D89D3EE00F13FC4 /* ContainerManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950796CA1CB434300044CFC7 /* ContainerManager.framework */; };
+		95BCD44C1D89D3EE00F13FC4 /* ContainerManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 950796CA1CB434300044CFC7 /* ContainerManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 9501EF2D1CB2D9340095045E;
 			remoteInfo = ContainerManagerTests;
 		};
+		95BCD44D1D89D3EE00F13FC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9501EF221CB2D9340095045E;
+			remoteInfo = ContainerManager;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95BCD44F1D89D3EE00F13FC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				95BCD44C1D89D3EE00F13FC4 /* ContainerManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9501EF721CB2E0B70095045E /* ContainerManager Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ContainerManager Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BCD44B1D89D3EE00F13FC4 /* ContainerManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,10 +151,12 @@
 				9501EF6E1CB2E0B70095045E /* Sources */,
 				9501EF6F1CB2E0B70095045E /* Frameworks */,
 				9501EF701CB2E0B70095045E /* Resources */,
+				95BCD44F1D89D3EE00F13FC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				95BCD44E1D89D3EE00F13FC4 /* PBXTargetDependency */,
 			);
 			name = "ContainerManager Example";
 			productName = "ContainerManager Example";
@@ -144,11 +170,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = brurend;
 				TargetAttributes = {
 					9501EF711CB2E0B70095045E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PN7U9JJPAS;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -221,6 +249,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		95BCD44E1D89D3EE00F13FC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ContainerManager;
+			targetProxy = 95BCD44D1D89D3EE00F13FC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9501EF791CB2E0B70095045E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -255,8 +291,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -301,8 +339,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -321,6 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -329,22 +370,28 @@
 		9501EF851CB2E0B70095045E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PN7U9JJPAS;
 				INFOPLIST_FILE = "ContainerManager Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.brurend.ContainerManager-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		9501EF861CB2E0B70095045E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PN7U9JJPAS;
 				INFOPLIST_FILE = "ContainerManager Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.brurend.ContainerManager-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
