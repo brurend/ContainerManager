@@ -15,33 +15,9 @@
 		950796BF1CB432240044CFC7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796BE1CB432240044CFC7 /* SecondViewController.swift */; };
 		950796C11CB4323E0044CFC7 /* MyContainerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C01CB4323E0044CFC7 /* MyContainerData.swift */; };
 		950796C31CB4337F0044CFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950796C21CB4337F0044CFC7 /* ViewController.swift */; };
-		95BCD44B1D89D3EE00F13FC4 /* ContainerManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950796CA1CB434300044CFC7 /* ContainerManager.framework */; };
-		95BCD44C1D89D3EE00F13FC4 /* ContainerManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 950796CA1CB434300044CFC7 /* ContainerManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95BCD4511D89D44300F13FC4 /* ContainerManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BCD4501D89D44300F13FC4 /* ContainerManager.framework */; };
+		95BCD4521D89D44300F13FC4 /* ContainerManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95BCD4501D89D44300F13FC4 /* ContainerManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		950796C91CB434300044CFC7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9501EF231CB2D9340095045E;
-			remoteInfo = ContainerManager;
-		};
-		950796CB1CB434300044CFC7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9501EF2D1CB2D9340095045E;
-			remoteInfo = ContainerManagerTests;
-		};
-		95BCD44D1D89D3EE00F13FC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9501EF221CB2D9340095045E;
-			remoteInfo = ContainerManager;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		95BCD44F1D89D3EE00F13FC4 /* Embed Frameworks */ = {
@@ -50,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				95BCD44C1D89D3EE00F13FC4 /* ContainerManager.framework in Embed Frameworks */,
+				95BCD4521D89D44300F13FC4 /* ContainerManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +44,7 @@
 		950796BE1CB432240044CFC7 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		950796C01CB4323E0044CFC7 /* MyContainerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContainerData.swift; sourceTree = "<group>"; };
 		950796C21CB4337F0044CFC7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ContainerManager.xcodeproj; path = ../ContainerManager.xcodeproj; sourceTree = "<group>"; };
+		95BCD4501D89D44300F13FC4 /* ContainerManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ContainerManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BCD44B1D89D3EE00F13FC4 /* ContainerManager.framework in Frameworks */,
+				95BCD4511D89D44300F13FC4 /* ContainerManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +64,7 @@
 			children = (
 				9501EF741CB2E0B70095045E /* ContainerManager Example */,
 				9501EF731CB2E0B70095045E /* Products */,
-				950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */,
+				95BCD4531D89D44B00F13FC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,13 +108,12 @@
 			name = Base.lproj;
 			sourceTree = "<group>";
 		};
-		950796C51CB434300044CFC7 /* Products */ = {
+		95BCD4531D89D44B00F13FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				950796CA1CB434300044CFC7 /* ContainerManager.framework */,
-				950796CC1CB434300044CFC7 /* ContainerManagerTests.xctest */,
+				95BCD4501D89D44300F13FC4 /* ContainerManager.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +131,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				95BCD44E1D89D3EE00F13FC4 /* PBXTargetDependency */,
 			);
 			name = "ContainerManager Example";
 			productName = "ContainerManager Example";
@@ -191,35 +165,12 @@
 			mainGroup = 9501EF691CB2E0B70095045E;
 			productRefGroup = 9501EF731CB2E0B70095045E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 950796C51CB434300044CFC7 /* Products */;
-					ProjectRef = 950796C41CB434300044CFC7 /* ContainerManager.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9501EF711CB2E0B70095045E /* ContainerManager Example */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		950796CA1CB434300044CFC7 /* ContainerManager.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ContainerManager.framework;
-			remoteRef = 950796C91CB434300044CFC7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		950796CC1CB434300044CFC7 /* ContainerManagerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ContainerManagerTests.xctest;
-			remoteRef = 950796CB1CB434300044CFC7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9501EF701CB2E0B70095045E /* Resources */ = {
@@ -248,14 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		95BCD44E1D89D3EE00F13FC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ContainerManager;
-			targetProxy = 95BCD44D1D89D3EE00F13FC4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9501EF791CB2E0B70095045E /* Main.storyboard */ = {
