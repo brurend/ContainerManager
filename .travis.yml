@@ -5,3 +5,7 @@ env:
 script:
     - set -o pipefail
     - ./fastlane/travis.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: never
