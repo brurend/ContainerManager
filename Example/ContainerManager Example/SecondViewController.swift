@@ -33,13 +33,13 @@ class SecondViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        container = self.parentViewController as! ContainerViewSegueManager
+    override func viewWillAppear(_ animated: Bool) {
+        container = self.parent as! ContainerViewSegueManager
     }
     
-    @IBAction func swapButton(sender: AnyObject) {
+    @IBAction func swapButton(_ sender: AnyObject) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let first = storyboard.instantiateViewControllerWithIdentifier("FirstViewController")
+        let first = storyboard.instantiateViewController(withIdentifier: "FirstViewController")
         container.swapFromViewController(self, toViewController: first)
     }
     
