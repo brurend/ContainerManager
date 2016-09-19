@@ -30,35 +30,35 @@ import UIKit
   This class should be set as your containerView Custom Class.
   You shouldn't override any of its methods.
  */
-public class ContainerViewSegueManager: UIViewController {
+open class ContainerViewSegueManager: UIViewController {
     
     /// The reference to your ContainerDataManager subclass
-    public var containerDataClass: ContainerDataManager?
+    open var containerDataClass: ContainerDataManager?
     
     // MARK: - Class setup
     
     /// Call to class setup
-    override public func viewWillAppear(animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         self.setupDataManagerClass(containerDataClass!)
     }
     
     /// Guarantees that containerDataClass is a subClass of ContainerDataManager.
-    private func setupDataManagerClass(container: ContainerDataManager) {
+    fileprivate func setupDataManagerClass(_ container: ContainerDataManager) {
         container.performSegue()
     }
     
     // MARK: - Segue and views transitions management
     
     /// Handles the transitions between all ViewControllers.
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if self.childViewControllers.count > 0 {
-            self.swapFromViewController(self.childViewControllers.first!, toViewController: segue.destinationViewController)
+            self.swapFromViewController(self.childViewControllers.first!, toViewController: segue.destination)
         }
         else {
-            self.addChildViewController(segue.destinationViewController)
-            segue.destinationViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-            self.view.addSubview(segue.destinationViewController.view)
-            segue.destinationViewController.didMoveToParentViewController(self)
+            self.addChildViewController(segue.destination)
+            segue.destination.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            self.view.addSubview(segue.destination.view)
+            segue.destination.didMove(toParentViewController: self)
         }
     }
     
@@ -69,22 +69,22 @@ public class ContainerViewSegueManager: UIViewController {
      - parameter toViewController:   Next ViewController.
      
      */
-    public func swapFromViewController(
-        fromViewController: UIViewController,
+    open func swapFromViewController(
+        _ fromViewController: UIViewController,
         toViewController: UIViewController)
     {
-        toViewController.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        toViewController.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         
-        if fromViewController.parentViewController != self {
+        if fromViewController.parent != self {
             self.addChildViewController(fromViewController)
         }
         
-        fromViewController.willMoveToParentViewController(nil)
+        fromViewController.willMove(toParentViewController: nil)
         self.addChildViewController(toViewController)
         
-        self.transitionFromViewController(fromViewController, toViewController: toViewController, duration: 0.1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: nil) { (finished) in
+        self.transition(from: fromViewController, to: toViewController, duration: 0.1, options: UIViewAnimationOptions.transitionCrossDissolve, animations: nil) { (finished) in
             fromViewController.removeFromParentViewController()
-            toViewController.didMoveToParentViewController(self)
+            toViewController.didMove(toParentViewController: self)
         }
     }
 }

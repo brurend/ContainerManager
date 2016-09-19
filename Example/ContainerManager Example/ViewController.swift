@@ -29,9 +29,9 @@ class ViewController: UIViewController {
     
     var containerView: ContainerViewSegueManager!
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedSegue" {
-            self.containerView = segue.destinationViewController as! ContainerViewSegueManager
+            self.containerView = segue.destination as! ContainerViewSegueManager
             
             let data = MyContainerData(fromParent: self, fromContainer: self.containerView)
             
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return true
     }
 }

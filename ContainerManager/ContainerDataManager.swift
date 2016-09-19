@@ -25,17 +25,17 @@
 import UIKit
 
 /// Responsible for managing your data and deciding which segue identifier should be used
-public class ContainerDataManager: NSObject {
+open class ContainerDataManager: NSObject {
     
     /// This is the segue Identifier that will be used by the performSegue method.
     /// Your class should set it with your own segue set in the Interface Builder.
-    public var currentSegueIdentifier: String!
+    open var currentSegueIdentifier: String!
     
     /// Reference to its parent ViewController class.
-    public var parent: UIViewController!
+    open var parent: UIViewController!
     
     /// Reference to its ContainverViewSegueManager class.
-    public var container: ContainerViewSegueManager!
+    open var container: ContainerViewSegueManager!
     
     
     /**
@@ -58,7 +58,7 @@ public class ContainerDataManager: NSObject {
         self.superSetup()
         fetchAPIDataWithCompletion(){ (finished: Bool) in
             if (finished) {
-                self.container.performSegueWithIdentifier(self.currentSegueIdentifier, sender: nil)
+                self.container.performSegue(withIdentifier: self.currentSegueIdentifier, sender: nil)
             }
         }
     }
@@ -77,7 +77,7 @@ public class ContainerDataManager: NSObject {
      Here is where you should call your methods to decide which
      segue identifier should be performed next.
     */
-    public func additionalSetup() {
+    open func additionalSetup() {
         preconditionFailure("This method must be overridden")
     }
     
@@ -86,8 +86,8 @@ public class ContainerDataManager: NSObject {
      If you do not use this method your performSegue method may be called before
      the request finished and may crash the application.
     */
-    public func fetchAPIDataWithCompletion(completion:(finished: Bool) -> Void) {
-        completion(finished: true)
+    open func fetchAPIDataWithCompletion(_ completion:(_ finished: Bool) -> Void) {
+        completion(true)
     }
     
 }
