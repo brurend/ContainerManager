@@ -1,5 +1,6 @@
 for_platform :ios do
 	for_lane :test do
 		app_identifier "br.com.brurend.ContainerManager"
-	end	
+		
+	end
 end
