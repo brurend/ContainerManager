@@ -97,7 +97,7 @@ container.swapFromViewController(self, toViewController: second)
 
 ## Requirements
 
-ContainerManager supports iOS 8.3+.
+ContainerManager supports iOS 8.3+. Updated to Swift 3.0
 
 ## Installation
 ContainerManager supports multiple methods for installing the library in a project.
@@ -111,7 +111,7 @@ it, simply add the following line to your `Podfile`:
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.3'
 
-pod 'ContainerManager', '~> 1.0.0'
+pod 'ContainerManager', '~> 2.0.0'
 ```
 
 Then, run the following command:
@@ -134,7 +134,7 @@ $ brew install carthage
 To integrate ContainerManager into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "brurend/ContainerManager" ~> 1.0.0
+github "brurend/ContainerManager" ~> 2.0.0
 ```
 
 Run `carthage` to build the framework and drag the built `ContainerManager.framework` into your Xcode project.
