@@ -3,6 +3,9 @@ default_platform :ios
 platform :ios do
   desc "Runs all the tests"
   lane :test do
+
+    clear_derived_data
+
   	scan(
 	  workspace: "ContainerManager.xcworkspace",
 	  scheme: "ContainerManager",
