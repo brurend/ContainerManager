@@ -38,7 +38,7 @@ open class ContainerViewSegueManager: UIViewController {
     // MARK: - Class setup
     
     /// Call to class setup
-    override open func viewWillAppear(_ animated: Bool) {
+    override open func viewDidLoad() {
         self.setupDataManagerClass(containerDataClass!)
     }
     
