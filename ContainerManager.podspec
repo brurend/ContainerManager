@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ContainerManager"
-  s.version          = "2.0.0"
+  s.version          = "2.0.1"
   s.summary          = "Helper classes to ContainerView usage with IE in Swift."
   s.description      = <<-DESC
 ContainerManager helps you with linking more than one ViewController to the same ContainerView with segues in the Interface Builder in Swift.
