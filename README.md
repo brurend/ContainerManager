@@ -41,7 +41,7 @@ Make sure `shouldPerformSegueWithIdentifier:sender:` returns `YES`
 
 ```swift
 override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-return true
+	return true
 }
 ```
 
